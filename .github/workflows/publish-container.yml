@@ -9,9 +9,9 @@ on:
         description: Website URL
         type: string
 
-  # push:
-  #   branches:
-  #     - next
+  push:
+    branches:
+      - next
 
   # pull_request:
 
@@ -20,12 +20,12 @@ on:
       - created
 
 env:
-  USER: Alwatr
+  USER: ExirWorld
   siteUrl: ${{ github.event.inputs.siteUrl || secrets.SITE_URL }}
 
 jobs:
   build:
-    if: github.repository_owner == 'Alwatr'
+    if: github.repository_owner == 'ExirWorld'
 
     name: Build & Publish Containers
     runs-on: ubuntu-latest
@@ -105,9 +105,9 @@ jobs:
             type=ref,enable=true,event=branch
             type=raw,enable=true,value=latest
           labels: |
-            org.opencontainers.image.title="alwatr/${{matrix.name}}"
-            org.opencontainers.image.vendor="Alwatr"
-            org.opencontainers.image.documentation="https://github.com/Alwatr/weaver"
+            org.opencontainers.image.title="Exir/${{matrix.name}}"
+            org.opencontainers.image.vendor="Exir"
+            org.opencontainers.image.documentation="https://github.com/ExirWorld/exir-exchange"
             org.opencontainers.image.authors="S. Ali Mihandoost <ali.mihandoost@gmail.com> (https://ali.mihandoost.com)"
 
       - name: 🚀 Build and push container image
