@@ -1,4 +1,6 @@
 import './component/greeting.js';
+import './component/dropdown.js';
+import './component/simple.js'
 import {logger} from './lib/config.js';
 
 logger.logFileModule?.('main');
