@@ -34,10 +34,10 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - name: exir-exchange
+          - name: exir-exchange-app
             path: ./packages/app
             context: .
-          # - name: weaver-api
+          # - name: exir-exchange-api
           #   path: ./packages/api
           #   context: .
 
